@@ -1,0 +1,47 @@
+Designing RESTful APIs
+
+You must understand the business process that you're going to model
+HTTP is our medium
+
+API Design must be deliberate:
+- functionality to expose
+- best way to expise it
+- test assumptions + user testing
+
+Challenges of good API design
+- clear naming
+- clear directions
+- knowledge of use case
+- adaptability
+- versioning
+- backward capability
+
+Affordance: something that allows you to perform an action or accomplish a goal
+
+What the API does / What the API makes easy / What the User wants to do
+
+Adding an API:
+- Bolt-on Strategy: for existing systems; takes advantage of existing code and systems
+- Greenfield Strategy: for new systems; API-first mindset -- take use of new technologies
+- Facade: replacing piece by piece; ideal for legacy systems; can be tough to manage
+
+API Modeling is a key to success
+1. Don't worry about the tools
+2. Have a consistent process
+3. It doesn't count unless it's written down / Documentation is non-negotiable
+
+API Modeling Process
+1. Identify the participants (i.e. the end users)
+2. Identify the activities
+3. Break the activities into specific steps (i.e. who does what)
+4. Create API definitions -- map the nouns to the HTTP verbs (Get, Delete, Put, Post)
+  - Get retrieves data
+  - Delete data
+  - Put updates an existing record
+  - Post create or catch-all
+5. Validate API
+  - Step through API calls
+  - Write code as if the API exists / Write documentation as if the API exists
+  - Look for gaps and potential issues
+
+
