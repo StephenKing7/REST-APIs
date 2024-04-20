@@ -18,7 +18,7 @@ Challenges of good API design
 
 Affordance: something that allows you to perform an action or accomplish a goal
 
-What the API does / What the API makes easy / What the User wants to do
+Focus on the intersection of:  What the API does + What the API makes easy + What the User wants to do
 
 Adding an API:
 - Bolt-on Strategy: for existing systems; takes advantage of existing code and systems
@@ -44,4 +44,112 @@ API Modeling Process
   - Write code as if the API exists / Write documentation as if the API exists
   - Look for gaps and potential issues
 
+REST is a set of principles and constraints
+- Few requirements
+- Docs discovered as you go
+- Flexible, based on needs
+- Flexible, based on patterns
+
+Every HTTP Request and Response has two parts: Headers and Payload
+
+HTTP 2xx Response Codes:
+- 200 OK = Request was successful
+- 201 Created = Resource was created
+- 202 Accepted = Action has started
+- 204 No Content = Delete a resource
+
+HTTP 3xx Response Codes:
+- 301 = Moved permanently
+- 302 = Moved temporarily
+
+HTTP 4xx Response Codes:
+- 400 = Bad request
+- 401 = Authentication
+- 403 = Forbiden
+- 404 = Not found
+Do not create your own error codes
+
+100-199 = Informational
+200-299 = Success
+300-399 = Redirect
+400-499 = Client Error
+500-599 = Server Error
+
+Content-Type = type of payload being provided by the server
+
+REST API Constraints
+1. Client-server architecture
+2. Stateless architecture
+- Every request should be able to execute on its own independently of other requests
+3. Cacheable
+- Know when to return results, instead of doing the work
+4. Layered systems
+- Clients may not connect directly with the server
+5. Code on demand (optional)
+- When a client requests a resource, it also receives the code to act upon it
+6  Uniform interfaces
+  a. Identification of resources
+  b. Manipulation of resources through these representations
+  c. Self-descriptive messages
+  d. Hypermedia as the engine of application state (HATEOAS)
+
+
+Idempotent or Safe Commands
+- GET, PUT, and DELETE
+  - The state of resources on the server is exactly the same after repeated commands
+- POST
+  - 
+
+
+Authentication (Authn)
+- Establish who you are
+- Login with credentials
+
+Authorization (Authz)
+- Establish your permissions
+- Restricted access
+
+API Keys:
+  Benefits
+  - Easy to add to header or URL
+  - Framework and programming language agnostic
+
+  Drawbacks
+  - URLs are not secrete
+  - Difficult to update/rotate if compromised
+
+OAuth 2.0 is the recommended approach for authentication
+  Benefits
+  - Reliable and well estabslished
+  - Massive ecosystem
+  - Open-source and commercial
+
+  Drawbacks:
+  - Complicated
+  - Initial implementation can be time consuming
+
+API Versioning
+- Versioning in URL vs. the Accept Header
+
+The accept header tells the API the data types and formats the client understands
+
+Content Negotiation in the Accept Header
+- Establish the markup or notation
+- Establish the media type
+- Establish the version of the media type and resource
+
+Content Negotiation is Ideal
+- The client can ask for the version that best fits their needs
+
+Large-Scale APIs
+- Optimize for clarity of purpose and ease of use
+
+Content Negotiation in the URL
+- Clear and explicit
+- Nothing is lost with copy/paste
+
+All APIs in an organization should take the same versioning approach
+- Simplify training
+- Increase predictability for users
+- Maintain clarity
 
