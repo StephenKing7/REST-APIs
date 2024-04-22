@@ -153,3 +153,25 @@ All APIs in an organization should take the same versioning approach
 - Increase predictability for users
 - Maintain clarity
 
+Hypermedia in common in APIs: non-linear -- no specified beginning, middle, or end
+
+HTTP Headers
+- Response codes
+- Versioning
+- Content Negotiation
+  - It happens implicitly as you're navigating the web
+- Caching
+  - ETags Request and Response: 1. Client makes request; 2. Server responds and creates an ETag; 3. Client makes a HEAD request; 4. If the data is unchanged, the server returns the same ETag; 5. if the data has changed, the server returns a new ETag; 6. If the ETag is changed, the client makes the full request
+
+Documentation approaches
+- Don't distribute a PDF
+- Don't use WordPress or other basic CMS
+
+What are our documentation goals?
+- We need snippet-friendly code
+- We need page history, specifically user facing
+- We need something that is easy to update
+- Searchable - if we can't find it, it doesn't exist
+
+Documentation via Wiki is actually decent (i.e. Confluence, MediaWiki)
+
