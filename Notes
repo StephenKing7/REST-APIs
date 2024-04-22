@@ -175,3 +175,11 @@ What are our documentation goals?
 
 Documentation via Wiki is actually decent (i.e. Confluence, MediaWiki)
 
+Only use an SDK if it'll make the users' lives easier
+
+SPOIL:
+- Succinct: concise but precise
+- Purposeful: apply the same care as you would to the API
+- Open source: encourage wrappers, extensions, user contributions
+- Idiomatic: use the patterns and conventions of the language
+- Logical: be consistent and repeat common patterns
